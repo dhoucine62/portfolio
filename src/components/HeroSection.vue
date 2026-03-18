@@ -19,7 +19,7 @@
         <a href="#projets" class="w-full sm:w-auto flex items-center justify-center px-8 py-4 text-base font-bold rounded-full text-white bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 transform hover:scale-105 transition-all duration-300 shadow-lg shadow-cyan-500/25">
           Découvrir mon travail
         </a>
-        <a href="mailto:votre-email@exemple.com" class="mt-4 sm:mt-0 w-full sm:w-auto flex items-center justify-center px-8 py-4 text-base font-bold rounded-full text-slate-300 bg-slate-800 border border-slate-700 hover:bg-slate-700 hover:text-white transform hover:scale-105 transition-all duration-300">
+        <a href="mailto:drifihoucine62@gmail.com" class="mt-4 sm:mt-0 w-full sm:w-auto flex items-center justify-center px-8 py-4 text-base font-bold rounded-full text-slate-300 bg-slate-800 border border-slate-700 hover:bg-slate-700 hover:text-white transform hover:scale-105 transition-all duration-300">
           Me contacter
         </a>
       </div>
