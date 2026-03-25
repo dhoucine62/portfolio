@@ -52,11 +52,11 @@ const projects = ref([
     img: tdwcm
   },
   {
-    title: 'placeholder',
-    description: 'placeholder',
-    techs: ['placeholder'],
-    link: 'https://github.com/dhoucine62/placeholder',
-    img: ''
+    title: 'Pyrotechclick',
+    description: 'Jeu vidéo réalisé lors de la Code Game Jam 2026 en moins de 30h.',
+    techs: ['Godot','GDScript'],
+    link: 'https://itch.io/jam/code-game-jam-2026/rate/4254956',
+    img: 'https://img.itch.zone/aW1nLzI1MzQ4NzE5LnBuZw==/315x250%23c/1AmyI7.png'
   },
   {
     title: 'placeholder',

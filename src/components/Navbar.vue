@@ -12,7 +12,7 @@
           <a href="#" class="text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-colors duration-300">Accueil</a>
           <a href="#competences" class="text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-colors duration-300">Compétences</a>
           <a href="#projets" class="text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-colors duration-300">Mes Projets</a>
-          <a href="mailto:votre-email@exemple.com" class="text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-colors duration-300">Contact</a>
+          <a href="mailto:mailto:drifihoucine62@gmail.com" class="text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-colors duration-300">Contact</a>
         </div>
         
         <div class="hidden md:flex items-center">
