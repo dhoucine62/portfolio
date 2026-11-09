@@ -43,13 +43,17 @@ npm run type-check
 ## Organisation
 
 ```text
-.github/workflows/deploy.yml  Vérification et déploiement GitHub Pages
-src/pages/Home.vue           Présentation et projets
-src/component/               Navigation, compétences et statistiques GitHub
-src/style.css                Styles, adaptation mobile et impression
-public/icon/                 Icônes des langages
-public/projects/             Captures et sources des visuels
-public/fonts/                Police locale et licence
+.github/workflows/deploy.yml                  Vérification et déploiement GitHub Pages
+src/pages/Home.vue                           Assemblage des sections
+src/component/sections/AccueilSection.vue      Accueil et menu
+src/component/sections/AProposSection.vue      Présentation
+src/component/sections/CompetencesSection.vue  Section compétences
+src/component/sections/ProjetsSection.vue      Projets et statistiques GitHub
+src/component/                              Composants communs
+src/style.css                               Styles, adaptation mobile et impression
+public/icon/                                Icônes des langages
+public/projects/                            Captures et sources des visuels
+public/fonts/                               Police locale et licence
 ```
 
 Les captures des projets et leurs sources sont documentées dans [public/projects/README.md](public/projects/README.md). La police Barlow Condensed est distribuée avec sa [licence SIL Open Font License](public/fonts/OFL-BarlowCondensed.txt).
