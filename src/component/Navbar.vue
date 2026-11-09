@@ -9,8 +9,8 @@ const links = [
 ];
 const activeSection = ref('#accueil');
 let observer: IntersectionObserver | undefined;
+const cvUrl = `${import.meta.env.BASE_URL}CV_2026-11-09_Houcine_Drifi.pdf`;
 
-function printCV() { window.print(); }
 function handleShortcut(event: KeyboardEvent) {
   const target = event.target;
   if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey ||
@@ -54,8 +54,8 @@ onUnmounted(() => {
         <span class="nav-number">{{ link.number }}</span><span>{{ link.label }}</span>
       </a>
     </nav>
-    <button class="print-button" @click="printCV" aria-label="Imprimer ou enregistrer le CV en PDF">
-      Mon CV <span aria-hidden="true">↗</span>
-    </button>
+    <a class="cv-link" :href="cvUrl" download aria-label="Télécharger mon CV au format PDF">
+      Télécharger mon CV <span aria-hidden="true">↗</span>
+    </a>
   </header>
 </template>
