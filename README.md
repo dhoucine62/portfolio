@@ -4,7 +4,7 @@
 
 Mon portfolio personnel, développé avec Vue 3 et TypeScript. J’y présente ma formation en informatique, mes compétences et mes projets.
 
-**Lien pour ouvrir le portfolio : [https://hdrifi.fr](hdrifi.fr)**
+**Lien pour ouvrir le portfolio : [hdrifi.fr](https://hdrifi.fr)**
 
 
 ## Technologies
