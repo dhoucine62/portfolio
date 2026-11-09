@@ -2,6 +2,8 @@
 import Competences from '@/component/Competences.vue';
 import GithubStats from '@/component/GithubStats.vue';
 
+const baseUrl = import.meta.env.BASE_URL;
+
 const menu = [
   { label: 'À propos', href: '#a-propos', number: '01' },
   { label: 'Compétences', href: '#competences', number: '02' },
@@ -89,7 +91,7 @@ const menu = [
       </div>
       <article class="project-card">
         <a class="project-visual project-screenshot" href="https://www.curseforge.com/minecraft/mc-mods/tdwcm" target="_blank" rel="noopener noreferrer" aria-label="Découvrir THE Doctor Who Client Mod sur CurseForge">
-          <img src="/projects/tdwcm.png" alt="Deux TARDIS dans Minecraft, dont un ouvert sur son intérieur." width="1920" height="1017" loading="lazy" />
+          <img :src="`${baseUrl}projects/tdwcm.png`" alt="Deux TARDIS dans Minecraft, dont un ouvert sur son intérieur." width="1920" height="1017" loading="lazy" />
           <span class="project-platform">CurseForge <span aria-hidden="true">↗</span></span>
         </a>
         <div class="project-info">
@@ -110,7 +112,7 @@ const menu = [
       </article>
       <article class="project-card">
         <a class="project-visual project-screenshot" href="https://r0-m-1.itch.io/pyrotechclick" target="_blank" rel="noopener noreferrer" aria-label="Découvrir PyrotechClick sur itch.io">
-          <img src="/projects/pyrotechclick.png" alt="Écran des commandes de PyrotechClick : déplacements, tirs et interactions à la souris." width="794" height="446" loading="lazy" />
+          <img :src="`${baseUrl}projects/pyrotechclick.png`" alt="Écran des commandes de PyrotechClick : déplacements, tirs et interactions à la souris." width="794" height="446" loading="lazy" />
           <span class="project-platform">itch.io <span aria-hidden="true">↗</span></span>
         </a>
         <div class="project-info">

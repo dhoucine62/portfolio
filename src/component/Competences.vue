@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 
+const baseUrl = import.meta.env.BASE_URL;
+
 const filters = ['Tout', 'Web', 'Applications', 'Données'] as const;
 type Filter = typeof filters[number];
 const selectedFilter = ref<Filter>('Tout');
@@ -22,7 +24,7 @@ const languages = [
   <ul class="skills-grid" aria-live="polite" aria-label="Langages de programmation">
     <li v-for="language in languages" :key="language.label" class="skill-item"
       :class="{ 'is-filtered': selectedFilter !== 'Tout' && selectedFilter !== language.category }">
-      <div class="skill-icon"><img :src="`/icon/${language.icon}.svg`" alt="" width="38" height="38" loading="lazy" /></div>
+      <div class="skill-icon"><img :src="`${baseUrl}icon/${language.icon}.svg`" alt="" width="38" height="38" loading="lazy" /></div>
       <div><h3>{{ language.label }}</h3><p>{{ language.detail }}</p></div>
     </li>
   </ul>
