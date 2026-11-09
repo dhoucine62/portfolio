@@ -1,37 +1,29 @@
 <script setup lang="ts">
+import { ref } from 'vue';
+
+const filters = ['Tout', 'Web', 'Applications', 'Données'] as const;
+type Filter = typeof filters[number];
+const selectedFilter = ref<Filter>('Tout');
 const languages = [
-  { label: "Java", icon: "Java" },
-  { label: "JavaScript", icon: "JavaScript" },
-  { label: "TypeScript", icon: "TypeScript" },
-  { label: "Python", icon: "Python" },
-  { label: "HTML/CSS", icon: "HTML" },
-  { label: "SQL", icon: "SQL" },
-  { label: "PHP", icon: "PHP" },
+  { label: 'HTML / CSS', icon: 'HTML', category: 'Web', detail: 'Structure & interfaces' },
+  { label: 'JavaScript', icon: 'JavaScript', category: 'Web', detail: 'Interactions web' },
+  { label: 'TypeScript', icon: 'TypeScript', category: 'Web', detail: 'JavaScript typé' },
+  { label: 'Java', icon: 'Java', category: 'Applications', detail: 'Programmation objet' },
+  { label: 'Python', icon: 'Python', category: 'Applications', detail: 'Logique & scripts' },
+  { label: 'SQL', icon: 'SQL', category: 'Données', detail: 'Bases de données' },
+  { label: 'PHP', icon: 'PHP', category: 'Web', detail: 'Développement serveur' },
 ];
 </script>
 
 <template>
-  <div>
-    <h3 class="mt-5 text-2xl font-bold text-slate-900">
-      Langages de programmation :
-    </h3>
-    <ul
-      class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-4"
-    >
-      <li
-        v-for="language in languages"
-        :key="language.label"
-        class="rounded-xl border-2 border-indigo-500/60 bg-white/5 px-5 py-3 text-center shadow-md transition duration-300 hover:-translate-y-1 hover:border-indigo-400 hover:shadow-indigo-500/30"
-      >
-        <img
-          :src="`/icon/${language.icon}.svg`"
-          :alt="language.label"
-          class="mx-auto block"
-          height="64"
-          width="64"
-        />
-        {{ language.label }}
-      </li>
-    </ul>
+  <div class="skills-filter" role="group" aria-label="Filtrer les compétences">
+    <button v-for="filter in filters" :key="filter" :class="{ selected: selectedFilter === filter }" :aria-pressed="selectedFilter === filter" @click="selectedFilter = filter">{{ filter }}</button>
   </div>
+  <ul class="skills-grid" aria-live="polite" aria-label="Langages de programmation">
+    <li v-for="language in languages" :key="language.label" class="skill-item"
+      :class="{ 'is-filtered': selectedFilter !== 'Tout' && selectedFilter !== language.category }">
+      <div class="skill-icon"><img :src="`/icon/${language.icon}.svg`" alt="" width="38" height="38" loading="lazy" /></div>
+      <div><h3>{{ language.label }}</h3><p>{{ language.detail }}</p></div>
+    </li>
+  </ul>
 </template>
